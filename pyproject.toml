@@ -1,6 +1,7 @@
 [build-system]
 requires = []
 build-backend = "civicflow.build_backend"
+backend-path = ["src"]
 
 [project]
 name = "civicflow"

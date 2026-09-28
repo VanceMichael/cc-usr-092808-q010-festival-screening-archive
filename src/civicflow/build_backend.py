@@ -43,5 +43,12 @@ def build_wheel(wheel_directory: str, config_settings=None, metadata_directory=N
     return filename
 
 
+def build_editable(
+    wheel_directory: str, config_settings=None, metadata_directory=None
+) -> str:
+    """为 PEP 660 可编辑安装生成确定性的项目 wheel。"""
+    return build_wheel(wheel_directory, config_settings, metadata_directory)
+
+
 def build_sdist(sdist_directory: str, config_settings=None) -> str:
     raise RuntimeError("本项目使用 wheel 构建")
